@@ -1,0 +1,126 @@
+.projectWrap {
+    &:last-child {
+        .projectHeader.closed {
+            border-radius: 0 0 5px 5px;
+        }
+        .projectBody {
+            border-radius: 0 0 5px 5px;
+        }
+    }
+}
+
+.projectHeader {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 10px;
+    border: 1px solid gray;
+    border-top: none;
+    transition: border-radius 0.3s ease-in-out;
+}
+
+.headerInfo {
+    display: flex;
+    align-items: center;
+}
+
+.projectPercent, .taskPercent {
+    border-radius: 4px;
+    padding: 4px 8px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-right: 10px;
+    width: 50px;
+    height: 30px;
+    box-sizing: content-box;
+}
+
+.projectPercent {
+    color: white;
+    background-color: red;
+    border: 1px solid red;
+}
+
+.taskPercent {
+    background-color: #ededed;
+    border: 1px solid black;
+}
+
+.headerNav {
+    display: flex;
+    position: relative;
+}
+
+.arrow {
+    transition: transform 0.3s ease-in-out;
+    &.rotate {
+        transform: rotate(180deg);
+    }
+}
+
+.arrowBtn {
+    margin-left: 10px;
+}
+
+.projectBody {
+    max-height: 0;
+    transition: all 0.3s ease-in-out;
+    border-left: 1px solid gray;
+    border-right: 1px solid gray;
+    border-bottom: 1px solid gray;
+    overflow: hidden;
+    visibility: hidden;
+
+    &.active {
+        max-height: 500px;
+        visibility: visible;
+    }
+}
+
+.taskWrap {
+    display: flex;
+    align-items: center;
+    padding: 15px 10px;
+    border-bottom: 1px solid gray;
+    background-color: #ededed;
+
+    &:last-child {
+        border-bottom: none;
+    }
+}
+
+.headerInput {
+    position: absolute;
+    width: 150px;
+    height: 30px;
+    left: -100px;
+    top: 50%;
+    transform: translateY(-50%);
+    transition: all 0.3s ease-in-out;
+    visibility: hidden;
+
+    &.active {
+        left: -220px;
+        visibility: visible;
+    }
+}
+
+.noResults {
+    padding: 10px 15px;
+    text-align: center;
+}
+
+.taskName {
+    display: flex;
+    align-items: center;
+    &.done {
+        text-decoration: line-through;
+    }
+}
+
+.checkmark {
+    width: 20px;
+    height: 20px;
+    margin-left: 5px;
+}

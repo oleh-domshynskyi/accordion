@@ -1,0 +1,64 @@
+.btn {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    min-width: 30px;
+    min-height: 30px;
+    cursor: pointer;
+    transition: all 0.2s ease-in-out;
+    svg {
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.btn-primary {
+    background-color: red;
+    border: 1px solid red;
+    svg {
+        color: white;
+        g, path{
+            fill: white;
+        }
+    }
+
+    &:hover {
+        background-color: white;
+        border: 1px solid gray;
+    
+        svg {
+            color: gray;
+            g, path{
+                fill: gray;
+            }
+            
+        }
+    }
+}
+
+.btn-secondary {
+    background-color: white;
+    border: 1px solid gray;
+
+    svg {
+        color: gray;
+        g, path{
+            fill: gray;
+        }
+        
+    }
+    &:hover {
+        background-color: red;
+        border: 1px solid red;
+        svg {
+            color: white;
+            g, path{
+                fill: white;
+            }
+            
+        }
+    }
+}

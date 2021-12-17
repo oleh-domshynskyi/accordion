@@ -1,0 +1,15 @@
+.searchWrap {
+    padding: 10px 15px;
+    border: 1px solid gray;
+    display: flex;
+    justify-content: space-between;
+    border-radius: 5px 5px 0 0;
+}
+
+.searchInput {
+    border: none;
+    width: 100%;
+    &:focus-visible {
+        outline: none;
+    }
+}
